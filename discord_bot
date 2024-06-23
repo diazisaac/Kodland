@@ -1,0 +1,38 @@
+import random
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Hola, soy un bot {bot.user}!. Tengo tres comandos, $fact para darte un dato interesante, $video para darte un video de youtube y $addition para sumar 2 numeros')
+
+@bot.command()
+async def fact(ctx):
+    await ctx.send("Sabias que el primer correo electrónico fue QWERTYUIOP")
+
+@bot.command()
+async def video(ctx):
+    await ctx.send("Aca hay un video https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+
+@bot.command()
+async def addition(ctx, a:float,b:float ):
+    resultado=a+b
+    await ctx.send(f"{resultado}")
+
+@bot.command()
+async def ranNumber(ctx) :
+    number=random.randint(1,100)
+    await ctx.send(number)
+
+
+
+bot.run("MTI1NDQzODAxNjI5OTA0NDk2Ng.GlYNma.-mRi3rKY01dII9iz-9q1LqFGqrRDH5BHsNojAE")
