@@ -1,11 +1,29 @@
 body {
-    font-family: 'Courier New', Courier, monospace; /* Familia de fuentes */
-    font-size: 30px; /* El tamaño de la fuente principal en el tag <p></p> */
-    background-color: #5988FF; /* El color del fondo de la página web */
-    color: #ffffff; /* El color del texto*/ 
+    font-family: cursive; /* Familia de fuentes */
+    font-size: 85px; /* El tamaño de la fuente principal en el tag <p></p> */
+    background-color: #0033ff; /* El color del fondo de la página web */
+    color: #ff0000; /* El color del texto*/ 
 }
 h1 {
-    color: #FD98FB; /* El color de la cabecera */
-    font-size: 50px; /* El tamaño de la fuente de la cabecera */
-    font-family:'Courier New', Courier, monospace; /* La familia tipográfica utilizada en la cabecera */
+    color: #ff7b00; /* El color de la cabecera */
+    font-size: 70px; /* El tamaño de la fuente de la cabecera */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* La familia tipográfica utilizada en la cabecera */
+}
+
+@keyframes color-change {
+    0% {
+        background-color: rgb(18, 255, 53);
+    }
+  
+    50% {
+        background-color: rgb(238, 255, 0);
+    }
+  
+    100% {
+        background-color: rgb(255, 0, 200);
+    }
+}
+
+body {
+    animation: color-change 3s infinite;
 }
